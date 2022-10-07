@@ -14,7 +14,7 @@ const fetchCoins = async () => {
     const response = await fetch(apiData.url);
     let data = await response.json();
     data = data.data;
-    data = data.slice(0, 9);
+    data = data.slice(0, 10);
     data.forEach((coin) => {
       const price = parseFloat(coin.priceUsd);
       const liText = `${coin.name} (${coin.symbol}): ${price.toFixed(2)}`;
