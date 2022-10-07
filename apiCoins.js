@@ -1,8 +1,9 @@
-const apiData = {
-  url: 'https://api.coincap.io/v2/assets',
-};
 const ulCoinsList = document.querySelector('#coins-list');
-
+const apisData = {
+  cryptoApi: 'https://api.coincap.io/v2/assets',
+  currencyApi: `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@{apiVersion}/${Date.now}/{endpoint}`,
+};
+console.log(new Date().getDate());
 const createLi = (text) => {
   const li = document.createElement('li');
   li.innerText = text;
@@ -11,15 +12,16 @@ const createLi = (text) => {
 
 const fetchCoins = async () => {
   try {
-    const response = await fetch(apiData.url);
+    const response = await fetch(apisData.cryptoApi);
     let data = await response.json();
     data = data.data;
-    data = data.slice(0, 10);
-    data.forEach((coin) => {
+    const topTen = data.slice(0, 10);
+    topTen.forEach((coin) => {
       const price = parseFloat(coin.priceUsd);
       const liText = `${coin.name} (${coin.symbol}): ${price.toFixed(2)}`;
       ulCoinsList.appendChild(createLi(liText));
     });
+    return data;
   } catch (error) {
     console.log(error);
   }
