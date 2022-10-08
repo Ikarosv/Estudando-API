@@ -5,6 +5,17 @@
   color: white;
 }
 
+#princ {
+  padding: 0;
+  border-radius: 5px;
+  /* box-shadow: 0 0 20px black; */
+  border: .5px solid black;
+}
+
+body {
+  background-color: rgb(241, 241, 241);
+}
+
 ul {
   list-style: none;
   padding: 0;
