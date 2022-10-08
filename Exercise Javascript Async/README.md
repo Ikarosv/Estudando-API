@@ -9,7 +9,7 @@ Criamos um site que, por padrão, retorna as 10 primeiras cripto moedas que a AP
 ### Futuras Funcionalidades
 
  - Pretendo adicionar um input para que o usuário escolha quantas cripto moedas irão aparecer.
- - ✅ ---Pretendo adicionar, também, uma forma de que o usuário escolha para qual moeda irá converter o valor das cripto moedas.---
+ - ✅ ~~Pretendo adicionar, também, uma forma de que o usuário escolha para qual moeda irá converter o valor das cripto moedas.~~
 
 ### API's utilizadas:
 
