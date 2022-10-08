@@ -1,0 +1,21 @@
+.Main {
+  background-color: blueviolet;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+#inputDiv {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: chartreuse;
+}
+
+label {
+  color: blueviolet;
+}

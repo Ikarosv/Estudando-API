@@ -5,14 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crypto Coins</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Crypto Moedas</h1>
-  <div>
-    <ul id="coins-list">
-    </ul>
+  <h1 class="text-center">Crypto Moedas</h1>
+  <main class="container d-flex justify-content-around mt-3 p-3 Main">
+    <div class="text-center">
+      <h3>Valor em USD</h3>
+      <ul id="coins-list">
+      </ul>
+    </div>
+    <div class="text-center">
+      <h3 id="real-title">Valor em </h3>
+      <ul id="real-list"></ul>
+    </div>
+  </main>
+  <div class="input-group container py-3" id="inputDiv">
+    <div class="d-flex flex-column w-100">
+      <label class="form-label" for="convert-input">Simbolo da Moeda:</label>
+      <input id="convert-input" class="form-control" type="text" autofocus>
+    </div>
   </div>
 
   <script src="apiCoins.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
