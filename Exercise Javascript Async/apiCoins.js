@@ -1,9 +1,11 @@
 const ulCoinsList = document.querySelector('#coins-list');
 const apisData = {
   cryptoApi: 'https://api.coincap.io/v2/assets',
-  currencyApi: `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@{apiVersion}/${Date.now}/{endpoint}`,
+  currencyApi: {
+    url: 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/',
+    endpoint: 'currencies/brl.min.json',
+  },
 };
-console.log(new Date().getDate());
 const createLi = (text) => {
   const li = document.createElement('li');
   li.innerText = text;
